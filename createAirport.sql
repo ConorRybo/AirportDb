@@ -1,5 +1,5 @@
 --
--- Conor Rybacki + Llayton Seymour
+-- Conor Rybacki + Lleyton Seymour
 -- Database: Airport
 -- File name: Airport.sql
 --
@@ -7,146 +7,161 @@
 --
 -- Creating Table For arriving flights
 -- 
+BEGIN;
 
-CREATE TABLE IF NOT EXISTS ARRIVING(
-    Flight_Num int NOT NULL,
-    Term_Letter varchar(1) NOT NULL,
-    Gate_Num int NOT NULL,
-    Arrival_Time DATETIME NOT NULL,
-    Airline_ID int NOT NULL,
-    Aircraft_ID int NOT NULL,
-    Pilot_ID int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+DROP TABLE IF EXISTS ARRIVING;
+DROP TABLE IF EXISTS DEPARTING;
+DROP TABLE IF EXISTS PASSENGERS;
+DROP TABLE IF EXISTS LUGGAGE;
+DROP TABLE IF EXISTS TERMINAL;
+DROP TABLE IF EXISTS AIRCRAFT;
+DROP TABLE IF EXISTS MANUFACTURER;
+DROP TABLE IF EXISTS EMPLOYEE;
+DROP TABLE IF EXISTS AIRLINE;
+DROP TABLE IF EXISTS PILOT;
+DROP TABLE IF EXISTS GROUNDCREW;
+DROP TABLE IF EXISTS AIRTRAFFIC;
+DROP TABLE IF EXISTS FAALICENSE;
+
+CREATE TABLE ARRIVING(
+Flight_Num      INTEGER NOT NULL,
+Term_Letter     VARCHAR(1) NOT NULL,
+Gate_Num        INTEGER NOT NULL,
+Arrival_Time    DATETIME NOT NULL,
+Airline_ID      INTEGER NOT NULL,
+Aircraft_ID     INTEGER NOT NULL,
+Pilot_ID        INTEGER NOT NULL,
+PRIMARY KEY (Flight_Num)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- DEPARTING flighs table
 --
 
-CREATE TABLE IF NOT EXISTS DEPARTING(
-    Flight_Num int NOT NULL,
-    Term_Letter varchar(1) NOT NULL,
-    Gate_Num int NOT NULL,
-    Arrival_Time DATETIME NOT NULL,
-    Airline_ID int NOT NULL,
-    Aircraft_ID int NOT NULL,
-    Pilot_ID int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE DEPARTING(
+Flight_Num      INTEGER NOT NULL,
+Term_Letter     VARCHAR(1) NOT NULL,
+Gate_Num        INTEGER NOT NULL,
+Arrival_Time    DATETIME NOT NULL,
+Airline_ID      INTEGER NOT NULL,
+Aircraft_ID     INTEGER NOT NULL,
+Pilot_ID        INTEGER NOT NULL,
+PRIMARY KEY (Flight_Num)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- PASSENGERS table: holds passenger information
 -- 
 
-CREATE TABLE IF NOT EXISTS PASSENGERS(
-    Pass_ID int NOT NULL,
-    Pass_FName varchar(50) NOT NULL,
-    Pass_LName varchar(50) NOT NULL,
-    Pass_Initial char(1) DEFAULT NULL,
-    Pass_Phone varchar(50) NOT NULL,
-    Flight_Num int NOT NULL
+CREATE TABLE PASSENGERS(
+Pass_ID         INTEGER NOT NULL,
+Pass_FName      VARCHAR(50) NOT NULL,
+Pass_LName      VARCHAR(50) NOT NULL,
+Pass_Initial    CHAR(1) DEFAULT NULL,
+Pass_Phone      VARCHAR(50) NOT NULL,
+Flight_Num      INTEGER NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- 
 -- LUGGAGE table: hold luggage information
 --
 
-CREATE TABLE IF NOT EXISTS LUGGAGE(
-    Pass_ID int NOT NULL,
-    Weight varchar(5) NOT NULL,
-    Color varchar(10) DEFAULT NULL
+CREATE TABLE LUGGAGE(
+Pass_ID         INTEGER NOT NULL,
+Bag_Weight      VARCHAR(5) NOT NULL,
+Bag_Color       VARCHAR(10) DEFAULT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- 
 -- TERMINAL table: hold terminal information
 -- 
 
-CREATE TABLE IF NOT EXISTS TERMINAL(
-    Term_Letter char(1) NOT NULL,
-    Gate_Num int NOT NULL
+CREATE TABLE TERMINAL(
+Term_Letter     CHAR(1) NOT NULL,
+Gate_Num        INTEGER NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- AIRCRAFT table to hold info about aircraft
 -- 
 
-CREATE TABLE IF NOT EXISTS AIRCRAFT(
-    Aircraft_ID int NOT NULL,
-    Aircraft_Model varchar(50) NOT NULL,
-    Aircraft_Variant varchar(50) NOT NULL,
-    Aircraft_Capacity varchar(5) NOT NULL,
-    Aircraft_Registration varchar(25) NOT NULL,
-    Man_ID int NOT NULL
+CREATE TABLE AIRCRAFT(
+Aircraft_ID     INTEGER NOT NULL,
+Aircraft_Model  VARCHAR(50) NOT NULL,
+Aircraft_Variant VARCHAR(50) NOT NULL,
+Aircraft_Capacity VARCHAR(5) NOT NULL,
+Aircraft_Registration VARCHAR(25) NOT NULL,
+Man_ID      INTEGER NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- MANUFACTURER table to hold airplan manufacturer information
 -- 
 
-CREATE TABLE IF NOT EXISTS MANUFACTURER(
-    Man_ID int NOT NULL,
-    Man_Name varchar(50) NOT NULL,
-    Man_Country varchar(50) NOT NULL,
-    Man_Phone varchar(50) NOT NULL,
-    Man_ContactName varchar(50) DEFAULT NULL
+CREATE TABLE MANUFACTURER(
+Man_ID      INTEGER NOT NULL,
+Man_Name    VARCHAR(50) NOT NULL,
+Man_Country VARCHAR(50) NOT NULL,
+Man_Phone   VARCHAR(50) NOT NULL,
+Man_ContactName VARCHAR(50) DEFAULT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- 
 -- EMPLOYEE table holding emoloyee information
 -- 
 
-CREATE TABLE IF NOT EXISTS EMPLOYEE(
-    Emp_ID int NOT NULL,
-    Emp_FName varchar(50) NOT NULL,
-    Emp_LName varchar(50) NOT NULL,
-    Emp_Initial char(1) DEFAULT NULL,
-    Emp_Phone varchar(50) NOT NULL,
-    Emp_Type char(1) DEFAULT NULL,
-    Sup_ID int DEFAULT NULL
+CREATE TABLE EMPLOYEE(
+Emp_ID      INTEGER NOT NULL,
+Emp_FName   VARCHAR(50) NOT NULL,
+Emp_LName   VARCHAR(50) NOT NULL,
+Emp_Initial CHAR(1) DEFAULT NULL,
+Emp_Phone   VARCHAR(50) NOT NULL,
+Emp_Type    CHAR(1) DEFAULT NULL,
+Sup_ID      INTEGER DEFAULT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- 
 -- AIRLINE table to hold information about airline
 -- 
 
-CREATE TABLE IF NOT EXISTS AIRLINE(
-    Airline_ID int NOT NULL,
-    Airline_Name varchar(50) NOT NULL,
-    Airline_Country varchar(50) NOT NULL,
-    Airline_Phone varchar(50) NOT NULL 
+CREATE TABLE AIRLINE(
+Airline_ID      INTEGER NOT NULL,
+Airline_Name    VARCHAR(50) NOT NULL,
+Airline_Country VARCHAR(50) NOT NULL,
+Airline_Phone   VARCHAR(50) NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- 
 -- PILOT table to hold pilot information
 -- 
 
-CREATE TABLE IF NOT EXISTS PILOT(
-    Pilot_ID int NOT NULL,
-    Pilot_FName varchar(50) NOT NULL,
-    Pilot_LName varchar(50) NOT NULL,
-    Pilot_Initial char(1) DEFAULT NULL,
-    Airline_ID int DEFAULT NULL,
-    FAA_Num int NOT NULL
+CREATE TABLE PILOT(
+Pilot_ID        INTEGER NOT NULL,
+Pilot_FName     VARCHAR(50) NOT NULL,
+Pilot_LName     VARCHAR(50) NOT NULL,
+Pilot_Initial   CHAR(1) DEFAULT NULL,
+Airline_ID      INTEGER DEFAULT NULL,
+FAA_Num         INTEGER NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- 
 -- GROUNDCREW subtype of EMPLOYEE
 -- 
 
-CREATE TABLE IF NOT EXISTS GROUNDCREW(
-    Emp_ID int NOT NULL,
-    Grnd_Team int DEFAULT NULL,
-    Term_Letter char(1) NOT NULL,
-    FAA_Num int NOT NULL
+CREATE TABLE GROUNDCREW(
+Emp_ID      INTEGER NOT NULL,
+Grnd_Team   INTEGER DEFAULT NULL,
+Term_Letter CHAR(1) NOT NULL,
+FAA_Num     INTEGER NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- 
 -- AIRTRAFFIC subtype of EMPLOYEE
 -- 
 
-CREATE TABLE IF NOT EXISTS AIRTRAFFIC(
-    Emp_ID int NOT NULL,
-    Ctrl_Team int DEFAULT NULL,
-    Tower_Num int NOT NULL,
-    FAA_Num int NOT NULL
+CREATE TABLE AIRTRAFFIC(
+Emp_ID      INTEGER NOT NULL,
+Ctrl_Team   INTEGER DEFAULT NULL,
+Tower_Num   INTEGER NOT NULL,
+FAA_Num     INTEGER NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
@@ -154,8 +169,14 @@ CREATE TABLE IF NOT EXISTS AIRTRAFFIC(
 -- FAALICENSE table to hold information about faa license
 -- 
 
-CREATE TABLE IF NOT EXISTS FAALICENSE(
-    FAA_Num int NOT NULL,
-    FAA_Class varchar(30) NOT NULL,
-    FAA_CertDate DATE NOT NULL
+CREATE TABLE FAALICENSE(
+FAA_Num     INTEGER NOT NULL,
+FAA_Class   VARCHAR(30) NOT NULL,
+FAA_CertDate DATE NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1; 
+
+
+
+
+
+COMMIT;

@@ -27,7 +27,7 @@ CREATE TABLE TERMINAL(
 Term_Letter     CHAR(1) NOT NULL,
 Gate_Num        INTEGER NOT NULL,
 
-PRIMARY KEY (Term_Letter)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+PRIMARY KEY (Term_Letter, Gate_Num)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- MANUFACTURER table to hold airplan manufacturer information

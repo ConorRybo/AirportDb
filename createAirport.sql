@@ -286,6 +286,28 @@ INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_
 INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(35, 'Cammy', 'Tempest', 'T', '447-862-1820', NULL, 5);
 
 --
+-- Inserting data for Airtraffic 
+-- 
+INSERT INTO AIRTRAFFIC(Emp_ID, Ctrl_Team, Tower_Num, FAA_Num) VALUES(7, 1, 1, 26);
+INSERT INTO AIRTRAFFIC(Emp_ID, Ctrl_Team, Tower_Num, FAA_Num) VALUES(8, 1, 1, 27);
+INSERT INTO AIRTRAFFIC(Emp_ID, Ctrl_Team, Tower_Num, FAA_Num) VALUES(9, 1, 1, 28);
+INSERT INTO AIRTRAFFIC(Emp_ID, Ctrl_Team, Tower_Num, FAA_Num) VALUES(13, 2, 2, 29);
+INSERT INTO AIRTRAFFIC(Emp_ID, Ctrl_Team, Tower_Num, FAA_Num) VALUES(14, 2, 2, 30);
+INSERT INTO AIRTRAFFIC(Emp_ID, Ctrl_Team, Tower_Num, FAA_Num) VALUES(15, 2, 2, 31);
+
+-- 
+-- Inserting data for Groundcrew
+-- 
+INSERT INTO GROUNDCREW(Emp_ID, Grnd_Team, Term_Letter, FAA_Num) VALUES(16, 1, 'A', 32); 
+INSERT INTO GROUNDCREW(Emp_ID, Grnd_Team, Term_Letter, FAA_Num) VALUES(17, 1, 'A', 33);
+INSERT INTO GROUNDCREW(Emp_ID, Grnd_Team, Term_Letter, FAA_Num) VALUES(18, 2, 'A', 34);
+INSERT INTO GROUNDCREW(Emp_ID, Grnd_Team, Term_Letter, FAA_Num) VALUES(19, 2, 'B', 35);
+INSERT INTO GROUNDCREW(Emp_ID, Grnd_Team, Term_Letter, FAA_Num) VALUES(21, 3, 'B', 36);
+INSERT INTO GROUNDCREW(Emp_ID, Grnd_Team, Term_Letter, FAA_Num) VALUES(22, 3, 'C', 37);
+INSERT INTO GROUNDCREW(Emp_ID, Grnd_Team, Term_Letter, FAA_Num) VALUES(23, 4, 'C', 38); 
+INSERT INTO GROUNDCREW(Emp_ID, Grnd_Team, Term_Letter, FAA_Num) VALUES(24, 5, 'D', 39); 
+
+--
 -- Inserting data for Aircraft
 --
 INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(1, 'B', '747', 205, '067ffa9f94b', 5);   

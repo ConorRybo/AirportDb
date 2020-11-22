@@ -131,7 +131,7 @@ CREATE TABLE FLIGHT(
 Flight_Num      INTEGER NOT NULL,
 Term_Letter     VARCHAR(1) NOT NULL,
 Gate_Num        INTEGER NOT NULL,
-Arrival_Time    TIME NOT NULL,
+Flight_Time    TIME NOT NULL,
 Airline_ID      INTEGER NOT NULL,
 Aircraft_ID     INTEGER NOT NULL,
 Pilot_ID        INTEGER NOT NULL,
@@ -329,18 +329,18 @@ INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID
 --
 -- Inserting data for arriving flights
 --
-INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Arrival_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1001, 'A', 5, '1:21', 1, 3, 8);    
-INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Arrival_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1002, 'B', 5, '18:42', 1, 10, 5);
-INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Arrival_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1003, 'A', 2, '23:28', 5, 2, 4);
-INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Arrival_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1004, 'C', 4, '20:06', 3, 2, 9);
-INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Arrival_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1005, 'C', 5, '19:26', 1, 6, 9);
-INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Arrival_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1006, 'C', 2, '3:25', 8, 1, 1);
-INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Departure_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(2001, 'A', 1, '14:35', 5, 4, 4);  
-INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Departure_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(2002, 'B', 3, '16:36', 3, 3, 8);
-INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Departure_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(2003, 'A', 3, '1:26', 2, 2, 6);
-INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Departure_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(2004, 'C', 3, '16:16', 8, 9, 3);
-INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Departure_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(2005, 'C', 4, '17:07', 7, 5, 2);
-INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Departure_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(2006, 'C', 1, '1:02', 2, 6, 6);
+INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Flight_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1001, 'A', 5, '1:21', 1, 3, 8);    
+INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Flight_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1002, 'B', 5, '18:42', 1, 10, 5);
+INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Flight_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1003, 'A', 2, '23:28', 5, 2, 4);
+INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Flight_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1004, 'C', 4, '20:06', 3, 2, 9);
+INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Flight_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1005, 'C', 5, '19:26', 1, 6, 9);
+INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Flight_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1006, 'C', 2, '3:25', 8, 1, 1);
+INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Flight_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(2001, 'A', 1, '14:35', 5, 4, 4);  
+INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Flight_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(2002, 'B', 3, '16:36', 3, 3, 8);
+INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Flight_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(2003, 'A', 3, '1:26', 2, 2, 6);
+INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Flight_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(2004, 'C', 3, '16:16', 8, 9, 3);
+INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Flight_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(2005, 'C', 4, '17:07', 7, 5, 2);
+INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Flight_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(2006, 'C', 1, '1:02', 2, 6, 6);
 
 --
 -- Inserting data for passengers

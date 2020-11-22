@@ -46,7 +46,7 @@ PRIMARY KEY (Man_ID)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 CREATE TABLE AIRCRAFT(
 Aircraft_ID     INTEGER NOT NULL,
 Aircraft_Model  VARCHAR(50) NOT NULL,
-Aircraft_Variant VARCHAR(50) NOT NULL,
+Aircraft_Variant VARCHAR(50) DEFAULT NULL,
 Aircraft_Capacity VARCHAR(5) NOT NULL,
 Aircraft_Registration VARCHAR(25) NOT NULL,
 Man_ID      INTEGER NOT NULL,
@@ -324,16 +324,16 @@ INSERT INTO GROUNDCREW(Emp_ID, Grnd_Team, Term_Letter, FAA_Num) VALUES(24, 5, 'D
 --
 -- Inserting data for Aircraft
 --
-INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(1, 'B', '747', 205, '067ffa9f94b', 5);   
-INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(2, 'B', '747', 198, '6564f5f6f49', 2);
-INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(3, 'B', '747', 112, 'ba56eb90d13', 1);
-INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(4, 'B', '747', 50, '402c642648e4', 2);
-INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(5, 'B', '747', 70, '54256304e5a8', 4);
-INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(6, 'B', '747', 52, '2633d5b6fa74', 3);
-INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(7, 'B', '747', 139, '9d44d1d1bb9', 5);
-INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(8, 'B', '747', 125, 'af553fd562d', 1);
-INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(9, 'B', '747', 181, 'edfb5dedb07', 4);
-INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(10, 'B', '747', 138, '8e741cd23f', 2);
+INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(1, '737','MAX', 190, '067ffa9f94b', 3);   
+INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(2, '747','-8', 450, '6564f5f6f49', 3);
+INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(3, '777','X', 426, 'ba56eb90d13', 3);
+INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(4, 'A22O',NULL, 160, '402c642648e4', 4);
+INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(5, 'A320',NULL, 170, '54256304e5a8', 4);
+INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(6, 'A380',NULL, 853, '2633d5b6fa74', 4);
+INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(7, 'Hondajet','Elite', 10, '9d44d1d1bb9', 5);
+INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(8, 'BAe','146', 70, 'af553fd562d', 2);
+INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(9, 'BAe','146', 181, 'edfb5dedb07', 2);
+INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(10, 'Falcon2000','LXs', 12, '8e741cd23f', 1);
 
 --
 -- Inserting data for Pilot
@@ -364,9 +364,9 @@ INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID
 -- Inserting data for arriving flights
 --
 INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Flight_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1001, 'A', 5, '1:21', 1, 3, 8);    
-INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Flight_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1002, 'B', 5, '18:42', 1, 10, 5);
+INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Flight_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1002, 'B', 5, '18:42', 1, 8, 5);
 INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Flight_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1003, 'A', 2, '23:28', 5, 2, 4);
-INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Flight_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1004, 'C', 4, '20:06', 3, 2, 9);
+INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Flight_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1004, 'C', 4, '20:06', 3, 10, 9);
 INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Flight_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1005, 'C', 5, '19:26', 1, 6, 9);
 INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Flight_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1006, 'C', 2, '3:25', 8, 1, 1);
 INSERT INTO FLIGHT (Flight_Num, Term_Letter, Gate_Num, Flight_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(2001, 'A', 1, '14:35', 5, 4, 4);  

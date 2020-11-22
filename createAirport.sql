@@ -149,7 +149,7 @@ CREATE TABLE DEPARTING(
 Flight_Num      INTEGER NOT NULL,
 Term_Letter     VARCHAR(1) NOT NULL,
 Gate_Num        INTEGER NOT NULL,
-Arrival_Time    DATETIME NOT NULL,
+Departure_Time    DATETIME NOT NULL,
 Airline_ID      INTEGER NOT NULL,
 Aircraft_ID     INTEGER NOT NULL,
 Pilot_ID        INTEGER NOT NULL,
@@ -299,201 +299,201 @@ INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone
 --
 -- Inserting data for Manufacturer
 --
-INSERT INTO MANUFACTURER VALUES(1, 'Dassault', 'France', '584-272-6030','Angie');
-INSERT INTO MANUFACTURER VALUES(2, 'BAE Systems','United Kingdom', '607-337-5854', 'Florella');
-INSERT INTO MANUFACTURER VALUES(3, 'Boeing', 'United States', '332-354-2772', 'Mozes');
-INSERT INTO MANUFACTURER VALUES(4, 'Airbus', 'United States', '502-711-0994', 'Genevieve');
-INSERT INTO MANUFACTURER VALUES(5, 'Honda', 'United States', '209-206-4822', 'Max');   
+INSERT INTO MANUFACTURER (Man_ID, Man_Name, Man_Country, Man_Phone, Man_ContactName) VALUES(1, 'Dassault', 'France', '584-272-6030','Angie');
+INSERT INTO MANUFACTURER (Man_ID, Man_Name, Man_Country, Man_Phone, Man_ContactName) VALUES(2, 'BAE Systems','United Kingdom', '607-337-5854', 'Florella');
+INSERT INTO MANUFACTURER (Man_ID, Man_Name, Man_Country, Man_Phone, Man_ContactName) VALUES(3, 'Boeing', 'United States', '332-354-2772', 'Mozes');
+INSERT INTO MANUFACTURER (Man_ID, Man_Name, Man_Country, Man_Phone, Man_ContactName) VALUES(4, 'Airbus', 'United States', '502-711-0994', 'Genevieve');
+INSERT INTO MANUFACTURER (Man_ID, Man_Name, Man_Country, Man_Phone, Man_ContactName) VALUES(5, 'Honda', 'United States', '209-206-4822', 'Max');   
 
 
 
 --
 -- Inserting data for luggage
 --
-INSERT INTO LUGGAGE VALUES (44, 31.61, 'Fuscia');        
-INSERT INTO LUGGAGE VALUES(13, 19.44, 'Orange');
-INSERT INTO LUGGAGE VALUES(34, 40.13, 'Goldenrod');
-INSERT INTO LUGGAGE VALUES(27, 7.89, 'Fuscia');
-INSERT INTO LUGGAGE VALUES(5, 41.27, 'Yellow');
-INSERT INTO LUGGAGE VALUES(8, 42.77, 'Violet');
-INSERT INTO LUGGAGE VALUES(23, 32.88, 'Fuscia');
-INSERT INTO LUGGAGE VALUES(21, 38.51, 'Crimson');
-INSERT INTO LUGGAGE VALUES(40, 16.09, 'Green');
-INSERT INTO LUGGAGE VALUES(31, 32.45, 'Teal');
-INSERT INTO LUGGAGE VALUES(4, 35.17, 'Puce');
-INSERT INTO LUGGAGE VALUES(28, 32.3, 'Teal');
-INSERT INTO LUGGAGE VALUES(34, 38.9, 'Puce');
-INSERT INTO LUGGAGE VALUES(38, 40.09, 'Green');
-INSERT INTO LUGGAGE VALUES(32, 22.16, 'Turquoise');
-INSERT INTO LUGGAGE VALUES(13, 32.82, 'Maroon');
-INSERT INTO LUGGAGE VALUES(30, 21.61, 'Yellow');
-INSERT INTO LUGGAGE VALUES(43, 16.15, 'Orange');
-INSERT INTO LUGGAGE VALUES(47, 39.33, 'Indigo');
-INSERT INTO LUGGAGE VALUES(27, 40.97, 'Blue');
-INSERT INTO LUGGAGE VALUES(41, 40.6, 'Fuscia');
-INSERT INTO LUGGAGE VALUES(26, 37.19, 'Violet');
-INSERT INTO LUGGAGE VALUES(19, 36.47, 'Purple');
-INSERT INTO LUGGAGE VALUES(38, 44.53, 'Crimson');
-INSERT INTO LUGGAGE VALUES(41, 6.62, 'Fuscia');
-INSERT INTO LUGGAGE VALUES(39, 24.98, 'Khaki');
-INSERT INTO LUGGAGE VALUES(24, 28.78, 'Violet');
-INSERT INTO LUGGAGE VALUES(45, 31.78, 'Blue');
-INSERT INTO LUGGAGE VALUES(2, 44.18, 'Blue');
-INSERT INTO LUGGAGE VALUES(41, 30.57, 'Orange');
-INSERT INTO LUGGAGE VALUES(26, 19.4, 'Teal');
-INSERT INTO LUGGAGE VALUES(10, 8.85, 'Mauv');
-INSERT INTO LUGGAGE VALUES(42, 40.2, 'Orange');
-INSERT INTO LUGGAGE VALUES(48, 39.35, 'Orange');
-INSERT INTO LUGGAGE VALUES(26, 28.99, 'Khaki');
-INSERT INTO LUGGAGE VALUES(23, 19.79, 'Mauv');
-INSERT INTO LUGGAGE VALUES(16, 40.38, 'Khaki');
-INSERT INTO LUGGAGE VALUES(22, 11.59, 'Khaki');
-INSERT INTO LUGGAGE VALUES(38, 39.04, 'Orange');
-INSERT INTO LUGGAGE VALUES(30, 23.22, 'Mauv');
-INSERT INTO LUGGAGE VALUES(8, 44.48, 'Mauv');
-INSERT INTO LUGGAGE VALUES(3, 27.4, 'Teal');
-INSERT INTO LUGGAGE VALUES(36, 13.41, 'Violet');
-INSERT INTO LUGGAGE VALUES(21, 22.68, 'Red');
-INSERT INTO LUGGAGE VALUES(1, 1.32, 'Fuscia');
-INSERT INTO LUGGAGE VALUES(46, 4.26, 'Violet');
-INSERT INTO LUGGAGE VALUES(40, 39.34, 'Teal');
-INSERT INTO LUGGAGE VALUES(4, 7.34, 'Indigo');
-INSERT INTO LUGGAGE VALUES(23, 18.38, 'Aquamarine');
-INSERT INTO LUGGAGE VALUES(36, 17.92, 'Red');
-INSERT INTO LUGGAGE VALUES(1, 29.66, 'Goldenrod');
-INSERT INTO LUGGAGE VALUES(3, 31.9, 'Fuscia');
-INSERT INTO LUGGAGE VALUES(1, 5.81, 'Fuscia');
-INSERT INTO LUGGAGE VALUES(3, 8.98, 'Blue');
-INSERT INTO LUGGAGE VALUES(7, 13.82, 'Khaki');
-INSERT INTO LUGGAGE VALUES(27, 30.48, 'Crimson');
-INSERT INTO LUGGAGE VALUES(2, 37.21, 'Teal');
-INSERT INTO LUGGAGE VALUES(16, 43.07, 'Yellow');
-INSERT INTO LUGGAGE VALUES(50, 19.1, 'Puce');
-INSERT INTO LUGGAGE VALUES(18, 43.94, 'Fuscia');
-INSERT INTO LUGGAGE VALUES(24, 1.52, 'Puce');
-INSERT INTO LUGGAGE VALUES(24, 2.97, 'Goldenrod');
-INSERT INTO LUGGAGE VALUES(16, 25.54, 'Puce');
-INSERT INTO LUGGAGE VALUES(3, 26.78, 'Fuscia');
-INSERT INTO LUGGAGE VALUES(43, 21.01, 'Orange');
-INSERT INTO LUGGAGE VALUES(14, 6.63, 'Purple');
-INSERT INTO LUGGAGE VALUES(16, 5.45, 'Puce');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(44, 31.61, 'Fuscia');        
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(13, 19.44, 'Orange');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(34, 40.13, 'Goldenrod');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(27, 7.89, 'Fuscia');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(5, 41.27, 'Yellow');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(8, 42.77, 'Violet');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(23, 32.88, 'Fuscia');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(21, 38.51, 'Crimson');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(40, 16.09, 'Green');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(31, 32.45, 'Teal');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(4, 35.17, 'Puce');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(28, 32.3, 'Teal');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(34, 38.9, 'Puce');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(38, 40.09, 'Green');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(32, 22.16, 'Turquoise');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(13, 32.82, 'Maroon');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(30, 21.61, 'Yellow');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(43, 16.15, 'Orange');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(47, 39.33, 'Indigo');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(27, 40.97, 'Blue');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(41, 40.6, 'Fuscia');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(26, 37.19, 'Violet');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(19, 36.47, 'Purple');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(38, 44.53, 'Crimson');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(41, 6.62, 'Fuscia');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(39, 24.98, 'Khaki');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(24, 28.78, 'Violet');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(45, 31.78, 'Blue');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(2, 44.18, 'Blue');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(41, 30.57, 'Orange');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(26, 19.4, 'Teal');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(10, 8.85, 'Mauv');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(42, 40.2, 'Orange');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(48, 39.35, 'Orange');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(26, 28.99, 'Khaki');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(23, 19.79, 'Mauv');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(16, 40.38, 'Khaki');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(22, 11.59, 'Khaki');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(38, 39.04, 'Orange');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(30, 23.22, 'Mauv');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(8, 44.48, 'Mauv');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(3, 27.4, 'Teal');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(36, 13.41, 'Violet');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(21, 22.68, 'Red');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(1, 1.32, 'Fuscia');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(46, 4.26, 'Violet');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(40, 39.34, 'Teal');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(4, 7.34, 'Indigo');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(23, 18.38, 'Aquamarine');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(36, 17.92, 'Red');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(1, 29.66, 'Goldenrod');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(3, 31.9, 'Fuscia');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(1, 5.81, 'Fuscia');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(3, 8.98, 'Blue');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(7, 13.82, 'Khaki');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(27, 30.48, 'Crimson');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(2, 37.21, 'Teal');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(16, 43.07, 'Yellow');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(50, 19.1, 'Puce');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(18, 43.94, 'Fuscia');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(24, 1.52, 'Puce');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(24, 2.97, 'Goldenrod');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(16, 25.54, 'Puce');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(3, 26.78, 'Fuscia');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(43, 21.01, 'Orange');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(14, 6.63, 'Purple');
+INSERT INTO LUGGAGE (Pass_ID, Bag_Weight, Bag_Color) VALUES(16, 5.45, 'Puce');
 
---
+-- 
 -- Inserting data for Airline
 --
-INSERT INTO AIRLINE VALUES(1, 'American', 'United States', '404-383-1274');   
-INSERT INTO AIRLINE VALUES(2, 'Delta', 'United States', '917-122-1345');
-INSERT INTO AIRLINE VALUES(3, 'Qantas', 'Australia', '775-707-3503');
-INSERT INTO AIRLINE VALUES(4, 'Southwest', 'United States', '719-943-9050');
-INSERT INTO AIRLINE VALUES(5, 'Frontier', 'United States', '212-421-5103');
-INSERT INTO AIRLINE VALUES(6, 'Alaska', 'United States', '912-602-2697');
-INSERT INTO AIRLINE VALUES(7, 'JetBlue', 'United States', '239-295-9179');
-INSERT INTO AIRLINE VALUES(8, 'Allegian', 'United States', '304-927-6521');
+INSERT INTO AIRLINE (Airline_ID, Airline_Name, Airline_Country, Airline_Phone) VALUES(1, 'American', 'United States', '404-383-1274');   
+INSERT INTO AIRLINE (Airline_ID, Airline_Name, Airline_Country, Airline_Phone) VALUES(2, 'Delta', 'United States', '917-122-1345');
+INSERT INTO AIRLINE (Airline_ID, Airline_Name, Airline_Country, Airline_Phone) VALUES(3, 'Qantas', 'Australia', '775-707-3503');
+INSERT INTO AIRLINE (Airline_ID, Airline_Name, Airline_Country, Airline_Phone) VALUES(4, 'Southwest', 'United States', '719-943-9050');
+INSERT INTO AIRLINE (Airline_ID, Airline_Name, Airline_Country, Airline_Phone) VALUES(5, 'Frontier', 'United States', '212-421-5103');
+INSERT INTO AIRLINE (Airline_ID, Airline_Name, Airline_Country, Airline_Phone) VALUES(6, 'Alaska', 'United States', '912-602-2697');
+INSERT INTO AIRLINE (Airline_ID, Airline_Name, Airline_Country, Airline_Phone) VALUES(7, 'JetBlue', 'United States', '239-295-9179');
+INSERT INTO AIRLINE (Airline_ID, Airline_Name, Airline_Country, Airline_Phone) VALUES(8, 'Allegian', 'United States', '304-927-6521');
 
 --
 -- Inserting data for Employee
 --
-INSERT INTO EMPLOYEE VALUES(1, 'Husain', 'Coppledike', 'A', '914-891-0767', NULL, NULL);     
-INSERT INTO EMPLOYEE VALUES(2, 'Cleon', 'Rothman', 'L', '235-401-5092', NULL, NULL);
-INSERT INTO EMPLOYEE VALUES(3, 'Janela', 'Auty', 'A', '931-916-8187', NULL, NULL);
-INSERT INTO EMPLOYEE VALUES(4, 'Sophi', 'Spavins', 'G', '418-844-3022', NULL, NULL);
-INSERT INTO EMPLOYEE VALUES(5, 'Agathe', 'Melhuish', 'C', '144-899-1736', NULL, NULL);
-INSERT INTO EMPLOYEE VALUES(6, 'Ann-marie', 'Detheridge', 'E', '310-624-4624', NULL, 3);
-INSERT INTO EMPLOYEE VALUES(7, 'Georgianne', 'Carrigan', 'K', '390-780-9540', 'T', 4);
-INSERT INTO EMPLOYEE VALUES(8, 'Antony', 'Hagart', 'A', '951-999-9982', 'T', 3);
-INSERT INTO EMPLOYEE VALUES(9, 'Stearn', 'Borit', 'B', '319-556-9357', 'T', 1);      
-INSERT INTO EMPLOYEE VALUES(10, 'Chaunce', 'Crone', 'A', '530-625-7543', NULL, 3);
-INSERT INTO EMPLOYEE VALUES(11, 'Virginia', 'Leishman', 'V', '596-329-3246', NULL, 5);
-INSERT INTO EMPLOYEE VALUES(12, 'Bonny', 'Ratley', 'L', '936-642-7334', NULL, 2);
-INSERT INTO EMPLOYEE VALUES(13, 'Janel', 'Disbrey', 'I', '278-465-5968', 'T', 5);
-INSERT INTO EMPLOYEE VALUES(14, 'Lloyd', 'Ambrozewicz', 'O', '685-248-8487', 'T', 5);
-INSERT INTO EMPLOYEE VALUES(15, 'Ajay', 'Brittan', 'P', '516-271-3396', 'T', 2);
-INSERT INTO EMPLOYEE VALUES(16, 'Hamlen', 'Sigfrid', 'R', '986-280-5858', 'G', 5);
-INSERT INTO EMPLOYEE VALUES(17, 'Jennee', 'Ritmeyer', 'R', '325-785-3770', 'G', 3);
-INSERT INTO EMPLOYEE VALUES(18, 'Teodoor', 'Pill', 'W', '197-666-6234', 'G', 3);
-INSERT INTO EMPLOYEE VALUES(19, 'Joli', 'Minihane', 'Q', '651-768-2798', 'G', 2);
-INSERT INTO EMPLOYEE VALUES(20, 'Andrej', 'Kaplin', 'A', '397-262-8038', NULL, 2);
-INSERT INTO EMPLOYEE VALUES(21, 'Had', 'Geram', 'D', '981-792-7393', 'G', 2);
-INSERT INTO EMPLOYEE VALUES(22, 'Lock', 'Castellan', 'C', '694-210-0374', 'G', 1);
-INSERT INTO EMPLOYEE VALUES(23, 'Andrei', 'Kellitt', 'S', '912-876-7955', 'G', 5);
-INSERT INTO EMPLOYEE VALUES(24, 'Ruperto', 'Allport', 'S', '690-431-9201', 'G', 2);
-INSERT INTO EMPLOYEE VALUES(25, 'Cly', 'Kinchin', 'S', '166-955-7975', NULL, 2);
-INSERT INTO EMPLOYEE VALUES(26, 'Chaim', 'Hempel', 'R', '986-203-3493', NULL, 5);
-INSERT INTO EMPLOYEE VALUES(27, 'Shawna', 'Fidal', 'T', '164-659-0989', NULL, 1);
-INSERT INTO EMPLOYEE VALUES(28, 'Carrie', 'Ashburner', 'K', '546-145-7046', NULL, 3);
-INSERT INTO EMPLOYEE VALUES(29, 'Micky', 'McCarney', 'P', '599-775-0853', NULL, 3);
-INSERT INTO EMPLOYEE VALUES(30, 'Johna', 'Duckworth', 'I', '926-908-4558', NULL, 4);
-INSERT INTO EMPLOYEE VALUES(31, 'Cheryl', 'Ruby', 'A', '837-164-3757', NULL, 3);
-INSERT INTO EMPLOYEE VALUES(32, 'Aimee', 'Tallach', 'C', '528-190-9919', NULL, 4);
-INSERT INTO EMPLOYEE VALUES(33, 'Agnes', 'Santhouse', 'C', '420-863-5339', NULL, 1);
-INSERT INTO EMPLOYEE VALUES(34, 'Shalne', 'Portwaine', 'N', '995-582-4396', NULL, 4);
-INSERT INTO EMPLOYEE VALUES(35, 'Cammy', 'Tempest', 'T', '447-862-1820', NULL, 5);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(1, 'Husain', 'Coppledike', 'A', '914-891-0767', NULL, NULL);     
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(2, 'Cleon', 'Rothman', 'L', '235-401-5092', NULL, NULL);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(3, 'Janela', 'Auty', 'A', '931-916-8187', NULL, NULL);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(4, 'Sophi', 'Spavins', 'G', '418-844-3022', NULL, NULL);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(5, 'Agathe', 'Melhuish', 'C', '144-899-1736', NULL, NULL);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(6, 'Ann-marie', 'Detheridge', 'E', '310-624-4624', NULL, 3);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(7, 'Georgianne', 'Carrigan', 'K', '390-780-9540', 'T', 4);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(8, 'Antony', 'Hagart', 'A', '951-999-9982', 'T', 3);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(9, 'Stearn', 'Borit', 'B', '319-556-9357', 'T', 1);      
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(10, 'Chaunce', 'Crone', 'A', '530-625-7543', NULL, 3);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(11, 'Virginia', 'Leishman', 'V', '596-329-3246', NULL, 5);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(12, 'Bonny', 'Ratley', 'L', '936-642-7334', NULL, 2);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(13, 'Janel', 'Disbrey', 'I', '278-465-5968', 'T', 5);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(14, 'Lloyd', 'Ambrozewicz', 'O', '685-248-8487', 'T', 5);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(15, 'Ajay', 'Brittan', 'P', '516-271-3396', 'T', 2);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(16, 'Hamlen', 'Sigfrid', 'R', '986-280-5858', 'G', 5);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(17, 'Jennee', 'Ritmeyer', 'R', '325-785-3770', 'G', 3);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(18, 'Teodoor', 'Pill', 'W', '197-666-6234', 'G', 3);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(19, 'Joli', 'Minihane', 'Q', '651-768-2798', 'G', 2);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(20, 'Andrej', 'Kaplin', 'A', '397-262-8038', NULL, 2);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(21, 'Had', 'Geram', 'D', '981-792-7393', 'G', 2);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(22, 'Lock', 'Castellan', 'C', '694-210-0374', 'G', 1);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(23, 'Andrei', 'Kellitt', 'S', '912-876-7955', 'G', 5);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(24, 'Ruperto', 'Allport', 'S', '690-431-9201', 'G', 2);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(25, 'Cly', 'Kinchin', 'S', '166-955-7975', NULL, 2);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(26, 'Chaim', 'Hempel', 'R', '986-203-3493', NULL, 5);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(27, 'Shawna', 'Fidal', 'T', '164-659-0989', NULL, 1);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(28, 'Carrie', 'Ashburner', 'K', '546-145-7046', NULL, 3);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(29, 'Micky', 'McCarney', 'P', '599-775-0853', NULL, 3);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(30, 'Johna', 'Duckworth', 'I', '926-908-4558', NULL, 4);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(31, 'Cheryl', 'Ruby', 'A', '837-164-3757', NULL, 3);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(32, 'Aimee', 'Tallach', 'C', '528-190-9919', NULL, 4);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(33, 'Agnes', 'Santhouse', 'C', '420-863-5339', NULL, 1);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(34, 'Shalne', 'Portwaine', 'N', '995-582-4396', NULL, 4);
+INSERT INTO EMPLOYEE (Emp_ID, Emp_FName, Emp_LName, Emp_Initial, Emp_Phone, Emp_Type, Sup_ID) VALUES(35, 'Cammy', 'Tempest', 'T', '447-862-1820', NULL, 5);
 
 --
 -- Inserting data for Aircraft
 --
-INSERT INTO AIRCRAFT VALUES(1, 'B', '747', 205, '067ffa9f94b', 5);   
-INSERT INTO AIRCRAFT VALUES(2, 'B', '747', 198, '6564f5f6f49', 2);
-INSERT INTO AIRCRAFT VALUES(3, 'B', '747', 112, 'ba56eb90d13', 1);
-INSERT INTO AIRCRAFT VALUES(4, 'B', '747', 50, '402c642648e4', 2);
-INSERT INTO AIRCRAFT VALUES(5, 'B', '747', 70, '54256304e5a8', 4);
-INSERT INTO AIRCRAFT VALUES(6, 'B', '747', 52, '2633d5b6fa74', 3);
-INSERT INTO AIRCRAFT VALUES(7, 'B', '747', 139, '9d44d1d1bb9', 5);
-INSERT INTO AIRCRAFT VALUES(8, 'B', '747', 125, 'af553fd562d', 1);
-INSERT INTO AIRCRAFT VALUES(9, 'B', '747', 181, 'edfb5dedb07', 4);
-INSERT INTO AIRCRAFT VALUES(10, 'B', '747', 138, '8e741cd23f', 2);
+INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(1, 'B', '747', 205, '067ffa9f94b', 5);   
+INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(2, 'B', '747', 198, '6564f5f6f49', 2);
+INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(3, 'B', '747', 112, 'ba56eb90d13', 1);
+INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(4, 'B', '747', 50, '402c642648e4', 2);
+INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(5, 'B', '747', 70, '54256304e5a8', 4);
+INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(6, 'B', '747', 52, '2633d5b6fa74', 3);
+INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(7, 'B', '747', 139, '9d44d1d1bb9', 5);
+INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(8, 'B', '747', 125, 'af553fd562d', 1);
+INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(9, 'B', '747', 181, 'edfb5dedb07', 4);
+INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Capacity, Aircraft_Registration, Man_ID) VALUES(10, 'B', '747', 138, '8e741cd23f', 2);
 
 --
 -- Inserting data for Pilot
 --
-INSERT INTO PILOT VALUES(1, 'Berne', 'Fancet', 'M', 1, 4);        
-INSERT INTO PILOT VALUES(2, 'Tully', 'Tumioto', 'M', 5, 21);
-INSERT INTO PILOT VALUES(3, 'Earlie', 'Jaffrey', 'M', 8, 22);
-INSERT INTO PILOT VALUES(4, 'Adelice', 'Langfat', 'F', 5, 7);
-INSERT INTO PILOT VALUES(5, 'Meris', 'Peckett', 'F', 3, 4);
-INSERT INTO PILOT VALUES(6, 'Zora', 'Georgeou', 'F', 5, 6);
-INSERT INTO PILOT VALUES(7, 'Adi', 'Doldon', 'F', 2, 16);
-INSERT INTO PILOT VALUES(8, 'Farlie', 'Swatten', 'M', 3, 10);
-INSERT INTO PILOT VALUES(9, 'Amitie', 'Scotter', 'F', 6, 20);
-INSERT INTO PILOT VALUES(10, 'Olav', 'Badman', 'M', 5, 19);
-INSERT INTO PILOT VALUES(11, 'Sam', 'Burger', 'M', 1, 1);
-INSERT INTO PILOT VALUES(12, 'Beauregard', 'Peppard', 'M', 2, 18);
-INSERT INTO PILOT VALUES(13, 'Lucilia', 'Hawse', 'F', 6, 24);
-INSERT INTO PILOT VALUES(14, 'Olivier', 'Hulson', 'M', 1, 25);
-INSERT INTO PILOT VALUES(15, 'Caitrin', 'Chasemoore', 'F', 6, 12);
-INSERT INTO PILOT VALUES(16, 'Bruno', 'Saltwell', 'M', 3, 2);
-INSERT INTO PILOT VALUES(17, 'Brodie', 'Reyner', 'M', 1, 8);
-INSERT INTO PILOT VALUES(18, 'Cletus', 'Sinott', 'M', 7, 17);
-INSERT INTO PILOT VALUES(19, 'Dominga', 'Haire', 'F', 4, 11);
-INSERT INTO PILOT VALUES(20, 'Vincenz', 'Marlor', 'M', 6, 13);    
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(1, 'Berne', 'Fancet', 'M', 1, 4);        
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(2, 'Tully', 'Tumioto', 'M', 5, 21);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(3, 'Earlie', 'Jaffrey', 'M', 8, 22);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(4, 'Adelice', 'Langfat', 'F', 5, 7);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(5, 'Meris', 'Peckett', 'F', 3, 4);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(6, 'Zora', 'Georgeou', 'F', 5, 6);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(7, 'Adi', 'Doldon', 'F', 2, 16);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(8, 'Farlie', 'Swatten', 'M', 3, 10);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(9, 'Amitie', 'Scotter', 'F', 6, 20);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(10, 'Olav', 'Badman', 'M', 5, 19);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(11, 'Sam', 'Burger', 'M', 1, 1);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(12, 'Beauregard', 'Peppard', 'M', 2, 18);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(13, 'Lucilia', 'Hawse', 'F', 6, 24);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(14, 'Olivier', 'Hulson', 'M', 1, 25);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(15, 'Caitrin', 'Chasemoore', 'F', 6, 12);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(16, 'Bruno', 'Saltwell', 'M', 3, 2);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(17, 'Brodie', 'Reyner', 'M', 1, 8);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(18, 'Cletus', 'Sinott', 'M', 7, 17);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(19, 'Dominga', 'Haire', 'F', 4, 11);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(20, 'Vincenz', 'Marlor', 'M', 6, 13);    
 
 
 --
 -- Inserting data for arriving flights
 --
-INSERT INTO ARRIVING VALUES(1001, 'A', 5, '1:21', 1, 3, 8);    
-INSERT INTO ARRIVING VALUES(1002, 'B', 5, '18:42', 1, 10, 5);
-INSERT INTO ARRIVING VALUES(1003, 'A', 2, '23:28', 5, 2, 4);
-INSERT INTO ARRIVING VALUES(1004, 'C', 4, '20:06', 3, 2, 9);
-INSERT INTO ARRIVING VALUES(1005, 'C', 5, '19:26', 1, 6, 9);
-INSERT INTO ARRIVING VALUES(1006, 'C', 2, '3:25', 8, 1, 1);
-INSERT INTO ARRIVING VALUES(1007, 'D', 1, '10:10', 1, 2, 9);
-INSERT INTO ARRIVING VALUES(1008, 'D', 4, '6:54', 8, 7, 2);
-INSERT INTO ARRIVING VALUES(1009, 'B', 2, '19:10', 1, 2, 1);
-INSERT INTO ARRIVING VALUES(1010, 'D', 2, '17:25', 1, 3, 6);
+INSERT INTO ARRIVING (Flight_Num, Term_Letter, Gate_Num, Arrival_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1001, 'A', 5, '1:21', 1, 3, 8);    
+INSERT INTO ARRIVING (Flight_Num, Term_Letter, Gate_Num, Arrival_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1002, 'B', 5, '18:42', 1, 10, 5);
+INSERT INTO ARRIVING (Flight_Num, Term_Letter, Gate_Num, Arrival_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1003, 'A', 2, '23:28', 5, 2, 4);
+INSERT INTO ARRIVING (Flight_Num, Term_Letter, Gate_Num, Arrival_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1004, 'C', 4, '20:06', 3, 2, 9);
+INSERT INTO ARRIVING (Flight_Num, Term_Letter, Gate_Num, Arrival_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1005, 'C', 5, '19:26', 1, 6, 9);
+INSERT INTO ARRIVING (Flight_Num, Term_Letter, Gate_Num, Arrival_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1006, 'C', 2, '3:25', 8, 1, 1);
+INSERT INTO ARRIVING (Flight_Num, Term_Letter, Gate_Num, Arrival_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1007, 'D', 1, '10:10', 1, 2, 9);
+INSERT INTO ARRIVING (Flight_Num, Term_Letter, Gate_Num, Arrival_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1008, 'D', 4, '6:54', 8, 7, 2);
+INSERT INTO ARRIVING (Flight_Num, Term_Letter, Gate_Num, Arrival_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1009, 'B', 2, '19:10', 1, 2, 1);
+INSERT INTO ARRIVING (Flight_Num, Term_Letter, Gate_Num, Arrival_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(1010, 'D', 2, '17:25', 1, 3, 6);
 
 --
 -- Inserting data for departing flights
 --
-INSERT INTO DEPARTING VALUES(2001, 'A', 5, '14:35', 5, 4, 4);  
-INSERT INTO DEPARTING VALUES(2002, 'B', 2, '16:36', 3, 3, 8);
-INSERT INTO DEPARTING VALUES(2003, 'A', 5, '1:26', 2, 2, 6);
-INSERT INTO DEPARTING VALUES(2004, 'C', 2, '16:16', 8, 9, 3);
-INSERT INTO DEPARTING VALUES(2005, 'C', 4, '17:07', 7, 5, 2);
-INSERT INTO DEPARTING VALUES(2006, 'C', 1, '1:02', 2, 6, 6);
-INSERT INTO DEPARTING VALUES(2007, 'D', 4, '15:11', 3, 6, 7);
-INSERT INTO DEPARTING VALUES(2008, 'D', 1, '6:21', 7, 8, 2);
-INSERT INTO DEPARTING VALUES(2009, 'B', 4, '10:02', 4, 2, 8);
-INSERT INTO DEPARTING VALUES(2010, 'D', 4, '12:35', 4, 3, 1);
+INSERT INTO DEPARTING (Flight_Num, Term_Letter, Gate_Num, Departure_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(2001, 'A', 5, '14:35', 5, 4, 4);  
+INSERT INTO DEPARTING (Flight_Num, Term_Letter, Gate_Num, Departure_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(2002, 'B', 2, '16:36', 3, 3, 8);
+INSERT INTO DEPARTING (Flight_Num, Term_Letter, Gate_Num, Departure_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(2003, 'A', 5, '1:26', 2, 2, 6);
+INSERT INTO DEPARTING (Flight_Num, Term_Letter, Gate_Num, Departure_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(2004, 'C', 2, '16:16', 8, 9, 3);
+INSERT INTO DEPARTING (Flight_Num, Term_Letter, Gate_Num, Departure_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(2005, 'C', 4, '17:07', 7, 5, 2);
+INSERT INTO DEPARTING (Flight_Num, Term_Letter, Gate_Num, Departure_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(2006, 'C', 1, '1:02', 2, 6, 6);
+INSERT INTO DEPARTING (Flight_Num, Term_Letter, Gate_Num, Departure_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(2007, 'D', 4, '15:11', 3, 6, 7);
+INSERT INTO DEPARTING (Flight_Num, Term_Letter, Gate_Num, Departure_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(2008, 'D', 1, '6:21', 7, 8, 2);
+INSERT INTO DEPARTING (Flight_Num, Term_Letter, Gate_Num, Departure_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(2009, 'B', 4, '10:02', 4, 2, 8);
+INSERT INTO DEPARTING (Flight_Num, Term_Letter, Gate_Num, Departure_Time, Airline_ID, Aircraft_ID, Pilot_ID) VALUES(2010, 'D', 4, '12:35', 4, 3, 1);
 
 COMMIT;

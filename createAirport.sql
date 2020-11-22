@@ -21,6 +21,126 @@ DROP TABLE IF EXISTS AIRTRAFFIC;
 DROP TABLE IF EXISTS FAALICENSE;
 
 --
+-- PASSENGERS table: holds passenger information
+-- 
+
+CREATE TABLE PASSENGER(
+Pass_ID         INTEGER NOT NULL AUTO_INCREMENT,
+Pass_FName      VARCHAR(50) NOT NULL,
+Pass_LName      VARCHAR(50) NOT NULL,
+Pass_Initial    CHAR(1) DEFAULT NULL,
+Pass_Phone      VARCHAR(50) NOT NULL,
+Flight_Num      INTEGER NOT NULL,
+PRIMARY KEY (Pass_ID)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- LUGGAGE table: hold luggage information
+--
+CREATE TABLE LUGGAGE(
+Pass_ID         INTEGER NOT NULL AUTO_INCREMENT,
+Bag_Weight      VARCHAR(5) NOT NULL,
+Bag_Color       VARCHAR(10) DEFAULT NULL,
+PRIMARY KEY(Pass_ID),
+FOREIGN KEY (Pass_ID) REFERENCES PASSENGER(Pass_ID)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- TERMINAL table: hold terminal information
+-- 
+CREATE TABLE TERMINAL(
+Term_Letter     CHAR(1) NOT NULL,
+Gate_Num        INTEGER NOT NULL,
+PRIMARY KEY (Term_Letter)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- MANUFACTURER table to hold airplan manufacturer information
+-- 
+CREATE TABLE MANUFACTURER(
+Man_ID      INTEGER NOT NULL,
+Man_Name    VARCHAR(50) NOT NULL,
+Man_Country VARCHAR(50) NOT NULL,
+Man_Phone   VARCHAR(50) NOT NULL,
+Man_ContactName VARCHAR(50) DEFAULT NULL,
+PRIMARY KEY (Man_ID)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- AIRCRAFT table to hold info about aircraft
+-- 
+CREATE TABLE AIRCRAFT(
+Aircraft_ID     INTEGER NOT NULL,
+Aircraft_Model  VARCHAR(50) NOT NULL,
+Aircraft_Variant VARCHAR(50) NOT NULL,
+Aircraft_Capacity VARCHAR(5) NOT NULL,
+Aircraft_Registration VARCHAR(25) NOT NULL,
+Man_ID      INTEGER NOT NULL,
+PRIMARY KEY (Aircraft_ID),
+FOREIGN KEY (Man_ID) REFERENCES MANUFACTURER(Man_ID)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- EMPLOYEE table holding emoloyee information
+-- 
+CREATE TABLE EMPLOYEE(
+Emp_ID      INTEGER NOT NULL AUTO_INCREMENT,
+Emp_FName   VARCHAR(50) NOT NULL,
+Emp_LName   VARCHAR(50) NOT NULL,
+Emp_Initial CHAR(1) DEFAULT NULL,
+Emp_Phone   VARCHAR(50) NOT NULL,
+Emp_Type    CHAR(1) DEFAULT NULL,
+Sup_ID      INTEGER DEFAULT NULL,
+PRIMARY KEY (Emp_ID)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- AIRLINE table to hold information about airline
+-- 
+CREATE TABLE AIRLINE(
+Airline_ID      INTEGER NOT NULL AUTO_INCREMENT,
+Airline_Name    VARCHAR(50) NOT NULL,
+Airline_Country VARCHAR(50) NOT NULL,
+Airline_Phone   VARCHAR(50) NOT NULL,
+PRIMARY KEY (Airline_ID)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- PILOT table to hold pilot information
+-- 
+CREATE TABLE PILOT(
+Pilot_ID        INTEGER NOT NULL AUTO_INCREMENT,
+Pilot_FName     VARCHAR(50) NOT NULL,
+Pilot_LName     VARCHAR(50) NOT NULL,
+Pilot_Initial   CHAR(1) DEFAULT NULL,
+Airline_ID      INTEGER DEFAULT NULL,
+FAA_Num         INTEGER NOT NULL,
+PRIMARY KEY (Pilot_ID)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- GROUNDCREW subtype of EMPLOYEE
+-- 
+CREATE TABLE GROUNDCREW(
+Emp_ID      INTEGER NOT NULL,
+Grnd_Team   INTEGER DEFAULT NULL,
+Term_Letter CHAR(1) NOT NULL,
+FAA_Num     INTEGER NOT NULL,
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- AIRTRAFFIC subtype of EMPLOYEE
+-- 
+CREATE TABLE AIRTRAFFIC(
+Emp_ID      INTEGER NOT NULL,
+Ctrl_Team   INTEGER DEFAULT NULL,
+Tower_Num   INTEGER NOT NULL,
+FAA_Num     INTEGER NOT NULL,
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+--
+-- FAALICENSE table to hold information about faa license
+-- 
+CREATE TABLE FAALICENSE(
+FAA_Num     INTEGER NOT NULL AUTO_INCREMENT,
+FAA_Class   VARCHAR(30) NOT NULL,
+FAA_CertDate DATE NOT NULL,
+PRIMARY KEY (FAA_Num)) ENGINE=InnoDB DEFAULT CHARSET=latin1; 
+
+--
 -- Creating Table For arriving flights
 -- 
 
@@ -47,135 +167,6 @@ Airline_ID      INTEGER NOT NULL,
 Aircraft_ID     INTEGER NOT NULL,
 Pilot_ID        INTEGER NOT NULL,
 PRIMARY KEY (Flight_Num)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- PASSENGERS table: holds passenger information
--- 
-
-CREATE TABLE PASSENGER(
-Pass_ID         INTEGER NOT NULL,
-Pass_FName      VARCHAR(50) NOT NULL,
-Pass_LName      VARCHAR(50) NOT NULL,
-Pass_Initial    CHAR(1) DEFAULT NULL,
-Pass_Phone      VARCHAR(50) NOT NULL,
-Flight_Num      INTEGER NOT NULL,
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- 
--- LUGGAGE table: hold luggage information
---
-
-CREATE TABLE LUGGAGE(
-Pass_ID         INTEGER NOT NULL,
-Bag_Weight      VARCHAR(5) NOT NULL,
-Bag_Color       VARCHAR(10) DEFAULT NULL,
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- 
--- TERMINAL table: hold terminal information
--- 
-
-CREATE TABLE TERMINAL(
-Term_Letter     CHAR(1) NOT NULL,
-Gate_Num        INTEGER NOT NULL,
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- AIRCRAFT table to hold info about aircraft
--- 
-
-CREATE TABLE AIRCRAFT(
-Aircraft_ID     INTEGER NOT NULL,
-Aircraft_Model  VARCHAR(50) NOT NULL,
-Aircraft_Variant VARCHAR(50) NOT NULL,
-Aircraft_Capacity VARCHAR(5) NOT NULL,
-Aircraft_Registration VARCHAR(25) NOT NULL,
-Man_ID      INTEGER NOT NULL,
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- MANUFACTURER table to hold airplan manufacturer information
--- 
-
-CREATE TABLE MANUFACTURER(
-Man_ID      INTEGER NOT NULL,
-Man_Name    VARCHAR(50) NOT NULL,
-Man_Country VARCHAR(50) NOT NULL,
-Man_Phone   VARCHAR(50) NOT NULL,
-Man_ContactName VARCHAR(50) DEFAULT NULL,
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- 
--- EMPLOYEE table holding emoloyee information
--- 
-
-CREATE TABLE EMPLOYEE(
-Emp_ID      INTEGER NOT NULL,
-Emp_FName   VARCHAR(50) NOT NULL,
-Emp_LName   VARCHAR(50) NOT NULL,
-Emp_Initial CHAR(1) DEFAULT NULL,
-Emp_Phone   VARCHAR(50) NOT NULL,
-Emp_Type    CHAR(1) DEFAULT NULL,
-Sup_ID      INTEGER DEFAULT NULL,
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- 
--- AIRLINE table to hold information about airline
--- 
-
-CREATE TABLE AIRLINE(
-Airline_ID      INTEGER NOT NULL,
-Airline_Name    VARCHAR(50) NOT NULL,
-Airline_Country VARCHAR(50) NOT NULL,
-Airline_Phone   VARCHAR(50) NOT NULL,
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- 
--- PILOT table to hold pilot information
--- 
-
-CREATE TABLE PILOT(
-Pilot_ID        INTEGER NOT NULL,
-Pilot_FName     VARCHAR(50) NOT NULL,
-Pilot_LName     VARCHAR(50) NOT NULL,
-Pilot_Initial   CHAR(1) DEFAULT NULL,
-Airline_ID      INTEGER DEFAULT NULL,
-FAA_Num         INTEGER NOT NULL,
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- 
--- GROUNDCREW subtype of EMPLOYEE
--- 
-
-CREATE TABLE GROUNDCREW(
-Emp_ID      INTEGER NOT NULL,
-Grnd_Team   INTEGER DEFAULT NULL,
-Term_Letter CHAR(1) NOT NULL,
-FAA_Num     INTEGER NOT NULL,
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- 
--- AIRTRAFFIC subtype of EMPLOYEE
--- 
-
-CREATE TABLE AIRTRAFFIC(
-Emp_ID      INTEGER NOT NULL,
-Ctrl_Team   INTEGER DEFAULT NULL,
-Tower_Num   INTEGER NOT NULL,
-FAA_Num     INTEGER NOT NULL,
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-
---
--- FAALICENSE table to hold information about faa license
--- 
-
-CREATE TABLE FAALICENSE(
-FAA_Num     INTEGER NOT NULL,
-FAA_Class   VARCHAR(30) NOT NULL,
-FAA_CertDate DATE NOT NULL,
-) ENGINE=InnoDB DEFAULT CHARSET=latin1; 
-
 
 -- Loading data rows
 
@@ -435,17 +426,17 @@ INSERT INTO EMPLOYEE VALUES(21, 'Had', 'Geram', 'D', '981-792-7393', 'G', 2);
 INSERT INTO EMPLOYEE VALUES(22, 'Lock', 'Castellan', 'C', '694-210-0374', 'G', 1);
 INSERT INTO EMPLOYEE VALUES(23, 'Andrei', 'Kellitt', 'S', '912-876-7955', 'G', 5);
 INSERT INTO EMPLOYEE VALUES(24, 'Ruperto', 'Allport', 'S', '690-431-9201', 'G', 2);
-INSERT INTO EMPLOYEE VALUES(25, 'Cly', 'Kinchin', 'S', '166-955-7975', 'P', 2);
-INSERT INTO EMPLOYEE VALUES(26, 'Chaim', 'Hempel', 'R', '986-203-3493', 'P', 5);
-INSERT INTO EMPLOYEE VALUES(27, 'Shawna', 'Fidal', 'T', '164-659-0989', 'P', 1);
-INSERT INTO EMPLOYEE VALUES(28, 'Carrie', 'Ashburner', 'K', '546-145-7046', 'P', 3);
-INSERT INTO EMPLOYEE VALUES(29, 'Micky', 'McCarney', 'P', '599-775-0853', 'P', 3);
-INSERT INTO EMPLOYEE VALUES(30, 'Johna', 'Duckworth', 'I', '926-908-4558', 'P', 4);
-INSERT INTO EMPLOYEE VALUES(31, 'Cheryl', 'Ruby', 'A', '837-164-3757', 'P', 3);
-INSERT INTO EMPLOYEE VALUES(32, 'Aimee', 'Tallach', 'C', '528-190-9919', 'P', 4);
-INSERT INTO EMPLOYEE VALUES(33, 'Agnes', 'Santhouse', 'C', '420-863-5339', 'P', 1);
-INSERT INTO EMPLOYEE VALUES(34, 'Shalne', 'Portwaine', 'N', '995-582-4396', 'P', 4);
-INSERT INTO EMPLOYEE VALUES(35, 'Cammy', 'Tempest', 'T', '447-862-1820', 'P', 5);
+INSERT INTO EMPLOYEE VALUES(25, 'Cly', 'Kinchin', 'S', '166-955-7975', NULL, 2);
+INSERT INTO EMPLOYEE VALUES(26, 'Chaim', 'Hempel', 'R', '986-203-3493', NULL, 5);
+INSERT INTO EMPLOYEE VALUES(27, 'Shawna', 'Fidal', 'T', '164-659-0989', NULL, 1);
+INSERT INTO EMPLOYEE VALUES(28, 'Carrie', 'Ashburner', 'K', '546-145-7046', NULL, 3);
+INSERT INTO EMPLOYEE VALUES(29, 'Micky', 'McCarney', 'P', '599-775-0853', NULL, 3);
+INSERT INTO EMPLOYEE VALUES(30, 'Johna', 'Duckworth', 'I', '926-908-4558', NULL, 4);
+INSERT INTO EMPLOYEE VALUES(31, 'Cheryl', 'Ruby', 'A', '837-164-3757', NULL, 3);
+INSERT INTO EMPLOYEE VALUES(32, 'Aimee', 'Tallach', 'C', '528-190-9919', NULL, 4);
+INSERT INTO EMPLOYEE VALUES(33, 'Agnes', 'Santhouse', 'C', '420-863-5339', NULL, 1);
+INSERT INTO EMPLOYEE VALUES(34, 'Shalne', 'Portwaine', 'N', '995-582-4396', NULL, 4);
+INSERT INTO EMPLOYEE VALUES(35, 'Cammy', 'Tempest', 'T', '447-862-1820', NULL, 5);
 
 --
 -- Inserting data for Aircraft
@@ -460,6 +451,30 @@ INSERT INTO AIRCRAFT VALUES(7, 'B', '747', 139, '9d44d1d1bb9', 5);
 INSERT INTO AIRCRAFT VALUES(8, 'B', '747', 125, 'af553fd562d', 1);
 INSERT INTO AIRCRAFT VALUES(9, 'B', '747', 181, 'edfb5dedb07', 4);
 INSERT INTO AIRCRAFT VALUES(10, 'B', '747', 138, '8e741cd23f', 2);
+
+--
+-- Inserting data for Pilot
+--
+INSERT INTO PILOT VALUES(1, 'Berne', 'Fancet', 'M', 1, 4);        
+INSERT INTO PILOT VALUES(2, 'Tully', 'Tumioto', 'M', 5, 21);
+INSERT INTO PILOT VALUES(3, 'Earlie', 'Jaffrey', 'M', 8, 22);
+INSERT INTO PILOT VALUES(4, 'Adelice', 'Langfat', 'F', 5, 7);
+INSERT INTO PILOT VALUES(5, 'Meris', 'Peckett', 'F', 3, 4);
+INSERT INTO PILOT VALUES(6, 'Zora', 'Georgeou', 'F', 5, 6);
+INSERT INTO PILOT VALUES(7, 'Adi', 'Doldon', 'F', 2, 16);
+INSERT INTO PILOT VALUES(8, 'Farlie', 'Swatten', 'M', 3, 10);
+INSERT INTO PILOT VALUES(9, 'Amitie', 'Scotter', 'F', 6, 20);
+INSERT INTO PILOT VALUES(10, 'Olav', 'Badman', 'M', 5, 19);
+INSERT INTO PILOT VALUES(11, 'Sam', 'Burger', 'M', 1, 1);
+INSERT INTO PILOT VALUES(12, 'Beauregard', 'Peppard', 'M', 2, 18);
+INSERT INTO PILOT VALUES(13, 'Lucilia', 'Hawse', 'F', 6, 24);
+INSERT INTO PILOT VALUES(14, 'Olivier', 'Hulson', 'M', 1, 25);
+INSERT INTO PILOT VALUES(15, 'Caitrin', 'Chasemoore', 'F', 6, 12);
+INSERT INTO PILOT VALUES(16, 'Bruno', 'Saltwell', 'M', 3, 2);
+INSERT INTO PILOT VALUES(17, 'Brodie', 'Reyner', 'M', 1, 8);
+INSERT INTO PILOT VALUES(18, 'Cletus', 'Sinott', 'M', 7, 17);
+INSERT INTO PILOT VALUES(19, 'Dominga', 'Haire', 'F', 4, 11);
+INSERT INTO PILOT VALUES(20, 'Vincenz', 'Marlor', 'M', 6, 13);    
 
 
 COMMIT;

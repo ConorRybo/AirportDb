@@ -190,96 +190,111 @@ FOREIGN KEY (Pass_ID) REFERENCES PASSENGER(Pass_ID)) ENGINE=InnoDB DEFAULT CHARS
 --
 -- Inserting data for Terminal
 --
-INSERT INTO TERMINAL VALUES('A');
-INSERT INTO TERMINAL VALUES('B');
-INSERT INTO TERMINAL VALUES('C');
-INSERT INTO TERMINAL VALUES('D');
-INSERT INTO TERMINAL VALUES('E');
+INSERT INTO TERMINAL (Term_Letter, Gate_Num) VALUES('A', 1);
+INSERT INTO TERMINAL (Term_Letter, Gate_Num) VALUES('A', 2);
+INSERT INTO TERMINAL (Term_Letter, Gate_Num) VALUES('A', 3);
+INSERT INTO TERMINAL (Term_Letter, Gate_Num) VALUES('A', 4);
+INSERT INTO TERMINAL (Term_Letter, Gate_Num) VALUES('A', 5);
+INSERT INTO TERMINAL (Term_Letter, Gate_Num) VALUES('B', 1);
+INSERT INTO TERMINAL (Term_Letter, Gate_Num) VALUES('B', 2);
+INSERT INTO TERMINAL (Term_Letter, Gate_Num) VALUES('B', 3);
+INSERT INTO TERMINAL (Term_Letter, Gate_Num) VALUES('B', 4);
+INSERT INTO TERMINAL (Term_Letter, Gate_Num) VALUES('B', 5);
+INSERT INTO TERMINAL (Term_Letter, Gate_Num) VALUES('C', 1);
+INSERT INTO TERMINAL (Term_Letter, Gate_Num) VALUES('C', 2);
+INSERT INTO TERMINAL (Term_Letter, Gate_Num) VALUES('C', 3);
+INSERT INTO TERMINAL (Term_Letter, Gate_Num) VALUES('C', 4);
+INSERT INTO TERMINAL (Term_Letter, Gate_Num) VALUES('C', 5);
+INSERT INTO TERMINAL (Term_Letter, Gate_Num) VALUES('D', 1);
+INSERT INTO TERMINAL (Term_Letter, Gate_Num) VALUES('D', 2);
+INSERT INTO TERMINAL (Term_Letter, Gate_Num) VALUES('D', 3);
+INSERT INTO TERMINAL (Term_Letter, Gate_Num) VALUES('D', 4);
+INSERT INTO TERMINAL (Term_Letter, Gate_Num) VALUES('D', 5);
 
 
 
 --
 -- Inserting data for FAA License
 --
-INSERT INTO FAALICENSE VALUES(1, 'C', '17-Mar-2021');     
-INSERT INTO FAALICENSE VALUES(2, 'C', '21-Jun-2020');
-INSERT INTO FAALICENSE VALUES(3, 'C', '07-Jan-2020');
-INSERT INTO FAALICENSE VALUES(4, 'C', '22-Sep-2020');
-INSERT INTO FAALICENSE VALUES(5, 'C', '15-Dec-2019');
-INSERT INTO FAALICENSE VALUES(6, 'C', '06-Mar-2021');
-INSERT INTO FAALICENSE VALUES(7, 'C', '06-Dec-2019');
-INSERT INTO FAALICENSE VALUES(8, 'C', '10-Apr-2021');
-INSERT INTO FAALICENSE VALUES(9, 'C', '01-Jul-2021');
-INSERT INTO FAALICENSE VALUES(10, 'C', '26-Mar-2020');
-INSERT INTO FAALICENSE VALUES(11, 'C', '06-Dec-2019');
-INSERT INTO FAALICENSE VALUES(12, 'C', '26-Sep-2020');
-INSERT INTO FAALICENSE VALUES(13, 'C', '07-Feb-2022');
-INSERT INTO FAALICENSE VALUES(14, 'C', '13-Jul-2021');
-INSERT INTO FAALICENSE VALUES(15, 'C', '08-Sep-2020');
-INSERT INTO FAALICENSE VALUES(16, 'C', '21-Sep-2020');
-INSERT INTO FAALICENSE VALUES(17, 'C', '01-Mar-2021');
-INSERT INTO FAALICENSE VALUES(18, 'C', '24-Mar-2020');
-INSERT INTO FAALICENSE VALUES(19, 'C', '13-Jun-2020');
-INSERT INTO FAALICENSE VALUES(20, 'C', '21-May-2021');
-INSERT INTO FAALICENSE VALUES(21, 'C', '19-Dec-2019');
-INSERT INTO FAALICENSE VALUES(22, 'C', '04-Apr-2021');
-INSERT INTO FAALICENSE VALUES(23, 'C', '05-Sep-2021');
-INSERT INTO FAALICENSE VALUES(24, 'C', '12-Dec-2020');
-INSERT INTO FAALICENSE VALUES(25, 'C', '17-Jan-2020');
+INSERT INTO FAALICENSE (FAA_Num, FAA_Class, FAA_CertDate) VALUES(1, 'C', '2021-03-17');     
+INSERT INTO FAALICENSE (FAA_Num, FAA_Class, FAA_CertDate) VALUES(2, 'C', '2020-03-21');
+INSERT INTO FAALICENSE (FAA_Num, FAA_Class, FAA_CertDate) VALUES(3, 'C', '2020-04-07');
+INSERT INTO FAALICENSE (FAA_Num, FAA_Class, FAA_CertDate) VALUES(4, 'C', '2020-04-22');
+INSERT INTO FAALICENSE (FAA_Num, FAA_Class, FAA_CertDate) VALUES(5, 'C', '2019-04-15');
+INSERT INTO FAALICENSE (FAA_Num, FAA_Class, FAA_CertDate) VALUES(6, 'C', '2021-04-06');
+INSERT INTO FAALICENSE (FAA_Num, FAA_Class, FAA_CertDate) VALUES(7, 'C', '2019-04-06');
+INSERT INTO FAALICENSE (FAA_Num, FAA_Class, FAA_CertDate) VALUES(8, 'C', '2021-04-10');
+INSERT INTO FAALICENSE (FAA_Num, FAA_Class, FAA_CertDate) VALUES(9, 'C', '2021-04-01');
+INSERT INTO FAALICENSE (FAA_Num, FAA_Class, FAA_CertDate) VALUES(10, 'C','2020-04-26');
+INSERT INTO FAALICENSE (FAA_Num, FAA_Class, FAA_CertDate) VALUES(11, 'C','2019-04-06');
+INSERT INTO FAALICENSE (FAA_Num, FAA_Class, FAA_CertDate) VALUES(12, 'C','2020-04-26');
+INSERT INTO FAALICENSE (FAA_Num, FAA_Class, FAA_CertDate) VALUES(13, 'C','2022-04-07');
+INSERT INTO FAALICENSE (FAA_Num, FAA_Class, FAA_CertDate) VALUES(14, 'C','2021-04-13');
+INSERT INTO FAALICENSE (FAA_Num, FAA_Class, FAA_CertDate) VALUES(15, 'C','2020-04-08');
+INSERT INTO FAALICENSE (FAA_Num, FAA_Class, FAA_CertDate) VALUES(16, 'C','2020-04-21');
+INSERT INTO FAALICENSE (FAA_Num, FAA_Class, FAA_CertDate) VALUES(17, 'C','2021-04-01');
+INSERT INTO FAALICENSE (FAA_Num, FAA_Class, FAA_CertDate) VALUES(18, 'C','2020-04-24');
+INSERT INTO FAALICENSE (FAA_Num, FAA_Class, FAA_CertDate) VALUES(19, 'C','2020-04-13');
+INSERT INTO FAALICENSE (FAA_Num, FAA_Class, FAA_CertDate) VALUES(20, 'C','2021-04-21');
+INSERT INTO FAALICENSE (FAA_Num, FAA_Class, FAA_CertDate) VALUES(21, 'C','2019-04-19');
+INSERT INTO FAALICENSE (FAA_Num, FAA_Class, FAA_CertDate) VALUES(22, 'C','2021-04-04');
+INSERT INTO FAALICENSE (FAA_Num, FAA_Class, FAA_CertDate) VALUES(23, 'C','2021-04-05');
+INSERT INTO FAALICENSE (FAA_Num, FAA_Class, FAA_CertDate) VALUES(24, 'C','2020-04-12');
+INSERT INTO FAALICENSE (FAA_Num, FAA_Class, FAA_CertDate) VALUES(25, 'C','2020-04-17');
 
 --
 -- Inserting data for passengers
 --
-INSERT INTO PASSENGER VALUES(1, 'Hannah', 'Ghelardoni', 'L', '696-601-3566');
-INSERT INTO PASSENGER VALUES(2, 'Michaeline', 'Esler', 'S', '445-173-7441');
-INSERT INTO PASSENGER VALUES(3, 'Amelia', 'Dumphry', 'A', '231-264-4120');
-INSERT INTO PASSENGER VALUES(4, 'Karim', 'Ghelardoni', 'Q', '696-601-3568');
-INSERT INTO PASSENGER VALUES(5, 'Alis', 'Gladhill', 'V', '722-284-9497');
-INSERT INTO PASSENGER VALUES(6, 'Robbie', 'Boagey', 'D', '779-869-5753');
-INSERT INTO PASSENGER VALUES(7, 'Lucius', 'Gong', 'B', '844-581-2762');
-INSERT INTO PASSENGER VALUES(8, 'Margot', 'Cane', 'H', '888-126-2498');
-INSERT INTO PASSENGER VALUES(9, 'Goran', 'Ovize', 'M', '981-168-9949');
-INSERT INTO PASSENGER VALUES(10, 'Gibby', 'Thing', 'R', '449-552-0248');
-INSERT INTO PASSENGER VALUES(11, 'Fae', 'Shore', 'E', '771-684-0587');
-INSERT INTO PASSENGER VALUES(12, 'Felicio', 'Walcot', 'E', '593-852-8654');
-INSERT INTO PASSENGER VALUES(13, 'Mella', 'Keats', 'H', '358-986-0433');
-INSERT INTO PASSENGER VALUES(14, 'Gertrude', 'Frisdick', 'J', '438-284-9114');
-INSERT INTO PASSENGER VALUES(15, 'Yance', 'O''Mara', 'M', '310-791-6842');
-INSERT INTO PASSENGER VALUES(16, 'Mallorie', 'Breslin', 'L', '505-615-9544');
-INSERT INTO PASSENGER VALUES(17, 'Elisha', 'Kelner', 'P', '837-499-9436');
-INSERT INTO PASSENGER VALUES(18, 'Mari', 'Hurlston', 'U', '959-139-9678');
-INSERT INTO PASSENGER VALUES(19, 'Benedicto', 'Tunnow', 'E', '416-324-2905');
-INSERT INTO PASSENGER VALUES(20, 'Dilly', 'Gullan', 'Q', '661-567-8087');
-INSERT INTO PASSENGER VALUES(21, 'Georgianna', 'Swindells', 'V', '169-280-7926');
-INSERT INTO PASSENGER VALUES(22, 'Mikael', 'Trodden', 'B', '372-946-4287');
-INSERT INTO PASSENGER VALUES(23, 'Gates', 'Walklate', 'V', '124-661-1892');
-INSERT INTO PASSENGER VALUES(24, 'Debbie', 'Zorzini', 'J', '586-944-7147');
-INSERT INTO PASSENGER VALUES(25, 'Kelci', 'Ewin', 'J', '580-856-8335');
-INSERT INTO PASSENGER VALUES(26, 'Fannie', 'Mouget', 'F', '235-216-3811');
-INSERT INTO PASSENGER VALUES(27, 'Gerhardt', 'Furlonge', 'S', '254-228-4916');
-INSERT INTO PASSENGER VALUES(28, 'Avram', 'Russi', 'S', '650-521-2894');
-INSERT INTO PASSENGER VALUES(29, 'Red', 'Janacek', 'A', '920-300-2171');
-INSERT INTO PASSENGER VALUES(30, 'Dewain', 'Catlin', 'A', '722-450-0242');
-INSERT INTO PASSENGER VALUES(31, 'Jephthah', 'Tweddle', 'C', '314-611-4128');
-INSERT INTO PASSENGER VALUES(32, 'Aluin', 'Dumbrall', 'C', '808-486-5471');
-INSERT INTO PASSENGER VALUES(33, 'Fabian', 'Mathison', 'M', '260-222-4705');
-INSERT INTO PASSENGER VALUES(34, 'Billy', 'Schottli', 'D', '881-983-3608');
-INSERT INTO PASSENGER VALUES(35, 'Thorndike', 'Tubbs', 'A', '283-853-9735');
-INSERT INTO PASSENGER VALUES(36, 'Donnamarie', 'Nicholson', 'F', '306-710-1300');
-INSERT INTO PASSENGER VALUES(37, 'Cordie', 'Orpen', 'J', '773-160-0255');
-INSERT INTO PASSENGER VALUES(38, 'Ernst', 'Mangion', 'G', '501-674-0612');
-INSERT INTO PASSENGER VALUES(39, 'Kania', 'Ellerey', 'G', '918-134-7192');
-INSERT INTO PASSENGER VALUES(40, 'Camel', 'Thewys', 'E', '158-807-1120');
-INSERT INTO PASSENGER VALUES(41, 'Cindie', 'Gatecliffe', 'T', '597-246-1210');
-INSERT INTO PASSENGER VALUES(42, 'Hedy', 'Brandt', 'F', '643-529-5111');
-INSERT INTO PASSENGER VALUES(43, 'Beulah', 'Kroch', 'H', '131-534-1591');
-INSERT INTO PASSENGER VALUES(44, 'Noam', 'Toner', 'Y', '360-576-0422');
-INSERT INTO PASSENGER VALUES(45, 'Lizabeth', 'Newarte', 'H', '144-321-1605');
-INSERT INTO PASSENGER VALUES(46, 'Micky', 'Middas', 'T', '231-705-6896');
-INSERT INTO PASSENGER VALUES(47, 'Ollie', 'Bantham', 'J', '644-767-1512');
-INSERT INTO PASSENGER VALUES(48, 'Joey', 'Kornalik', 'E', '148-662-0744');
-INSERT INTO PASSENGER VALUES(49, 'Lari', 'Runnalls', 'W', '993-253-1329');
-INSERT INTO PASSENGER VALUES(50, 'Laurent', 'Shaw', 'R', '479-648-3735')
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(1, 'Hannah', 'Ghelardoni', 'L', '696-601-3566');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(2, 'Michaeline', 'Esler', 'S', '445-173-7441');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(3, 'Amelia', 'Dumphry', 'A', '231-264-4120');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(4, 'Karim', 'Ghelardoni', 'Q', '696-601-3568');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(5, 'Alis', 'Gladhill', 'V', '722-284-9497');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(6, 'Robbie', 'Boagey', 'D', '779-869-5753');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(7, 'Lucius', 'Gong', 'B', '844-581-2762');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(8, 'Margot', 'Cane', 'H', '888-126-2498');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(9, 'Goran', 'Ovize', 'M', '981-168-9949');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(10, 'Gibby', 'Thing', 'R', '449-552-0248');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(11, 'Fae', 'Shore', 'E', '771-684-0587');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(12, 'Felicio', 'Walcot', 'E', '593-852-8654');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(13, 'Mella', 'Keats', 'H', '358-986-0433');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(14, 'Gertrude', 'Frisdick', 'J', '438-284-9114');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(15, 'Yance', 'O''Mara', 'M', '310-791-6842');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(16, 'Mallorie', 'Breslin', 'L', '505-615-9544');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(17, 'Elisha', 'Kelner', 'P', '837-499-9436');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(18, 'Mari', 'Hurlston', 'U', '959-139-9678');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(19, 'Benedicto', 'Tunnow', 'E', '416-324-2905');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(20, 'Dilly', 'Gullan', 'Q', '661-567-8087');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(21, 'Georgianna', 'Swindells', 'V', '169-280-7926');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(22, 'Mikael', 'Trodden', 'B', '372-946-4287');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(23, 'Gates', 'Walklate', 'V', '124-661-1892');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(24, 'Debbie', 'Zorzini', 'J', '586-944-7147');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(25, 'Kelci', 'Ewin', 'J', '580-856-8335');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(26, 'Fannie', 'Mouget', 'F', '235-216-3811');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(27, 'Gerhardt', 'Furlonge', 'S', '254-228-4916');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(28, 'Avram', 'Russi', 'S', '650-521-2894');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(29, 'Red', 'Janacek', 'A', '920-300-2171');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(30, 'Dewain', 'Catlin', 'A', '722-450-0242');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(31, 'Jephthah', 'Tweddle', 'C', '314-611-4128');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(32, 'Aluin', 'Dumbrall', 'C', '808-486-5471');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(33, 'Fabian', 'Mathison', 'M', '260-222-4705');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(34, 'Billy', 'Schottli', 'D', '881-983-3608');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(35, 'Thorndike', 'Tubbs', 'A', '283-853-9735');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(36, 'Donnamarie', 'Nicholson', 'F', '306-710-1300');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(37, 'Cordie', 'Orpen', 'J', '773-160-0255');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(38, 'Ernst', 'Mangion', 'G', '501-674-0612');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(39, 'Kania', 'Ellerey', 'G', '918-134-7192');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(40, 'Camel', 'Thewys', 'E', '158-807-1120');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(41, 'Cindie', 'Gatecliffe', 'T', '597-246-1210');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(42, 'Hedy', 'Brandt', 'F', '643-529-5111');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(43, 'Beulah', 'Kroch', 'H', '131-534-1591');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(44, 'Noam', 'Toner', 'Y', '360-576-0422');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(45, 'Lizabeth', 'Newarte', 'H', '144-321-1605');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(46, 'Micky', 'Middas', 'T', '231-705-6896');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(47, 'Ollie', 'Bantham', 'J', '644-767-1512');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(48, 'Joey', 'Kornalik', 'E', '148-662-0744');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(49, 'Lari', 'Runnalls', 'W', '993-253-1329');
+INSERT INTO PASSENGER (Pass_ID, Pass_FName, Pass_LName, Pass_Initial, Pass_Phone, Flight_Num) VALUES(50, 'Laurent', 'Shaw', 'R', '479-648-3735')
 
 --
 -- Inserting data for Manufacturer
@@ -480,6 +495,5 @@ INSERT INTO DEPARTING VALUES(2007, 'D', 4, '15:11', 3, 6, 7);
 INSERT INTO DEPARTING VALUES(2008, 'D', 1, '6:21', 7, 8, 2);
 INSERT INTO DEPARTING VALUES(2009, 'B', 4, '10:02', 4, 2, 8);
 INSERT INTO DEPARTING VALUES(2010, 'D', 4, '12:35', 4, 3, 1);
-
 
 COMMIT;

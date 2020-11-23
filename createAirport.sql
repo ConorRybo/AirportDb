@@ -339,25 +339,25 @@ INSERT INTO AIRCRAFT (Aircraft_ID, Aircraft_Model, Aircraft_Variant, Aircraft_Ca
 -- Inserting data for Pilot
 --
 INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(1, 'Berne', 'Fancet', 'M', 1, 4);        
-INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(2, 'Tully', 'Tumioto', 'M', 5, 21);
-INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(3, 'Earlie', 'Jaffrey', 'M', 8, 22);
-INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(4, 'Adelice', 'Langfat', 'F', 5, 7);
-INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(5, 'Meris', 'Peckett', 'F', 3, 4);
-INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(6, 'Zora', 'Georgeou', 'F', 5, 6);
-INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(7, 'Adi', 'Doldon', 'F', 2, 16);
-INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(8, 'Farlie', 'Swatten', 'M', 3, 10);
-INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(9, 'Amitie', 'Scotter', 'F', 6, 20);
-INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(10, 'Olav', 'Badman', 'M', 5, 19);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(2, 'Tully', 'Tumioto', 'A', 5, 21);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(3, 'Earlie', 'Jaffrey', 'K', 8, 22);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(4, 'Adelice', 'Langfat', 'L', 5, 7);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(5, 'Meris', 'Peckett', 'L', 3, 4);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(6, 'Zora', 'Georgeou', 'A', 5, 6);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(7, 'Adi', 'Doldon', 'W', 2, 16);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(8, 'Farlie', 'Swatten', 'C', 3, 10);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(9, 'Amitie', 'Scotter', 'J', 6, 20);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(10, 'Olav', 'Badman', 'I', 5, 19);
 INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(11, 'Sam', 'Burger', 'M', 1, 1);
 INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(12, 'Beauregard', 'Peppard', 'M', 2, 18);
-INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(13, 'Lucilia', 'Hawse', 'F', 6, 24);
-INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(14, 'Olivier', 'Hulson', 'M', 1, 25);
-INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(15, 'Caitrin', 'Chasemoore', 'F', 6, 12);
-INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(16, 'Bruno', 'Saltwell', 'M', 3, 2);
-INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(17, 'Brodie', 'Reyner', 'M', 1, 8);
-INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(18, 'Cletus', 'Sinott', 'M', 7, 17);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(13, 'Lucilia', 'Hawse', 'R', 6, 24);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(14, 'Olivier', 'Hulson', 'E', 1, 25);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(15, 'Caitrin', 'Chasemoore', 'G', 6, 12);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(16, 'Bruno', 'Saltwell', 'T', 3, 2);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(17, 'Brodie', 'Reyner', 'O', 1, 8);
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(18, 'Cletus', 'Sinott', 'G', 7, 17);
 INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(19, 'Dominga', 'Haire', 'F', 4, 11);
-INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(20, 'Vincenz', 'Marlor', 'M', 6, 13);    
+INSERT INTO PILOT (Pilot_ID, Pilot_FName, Pilot_LName, Pilot_Initial, Airline_ID, FAA_Num) VALUES(20, 'Vincenz', 'Marlor', 'T', 6, 13);    
 
 
 --
